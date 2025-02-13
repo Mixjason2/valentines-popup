@@ -11,14 +11,28 @@
             color: white;
             text-align: center;
             font-family: 'Comic Sans MS', cursive;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
+
         h1 {
             font-size: 3rem;
             text-shadow: 3px 3px 5px black;
+            margin: 10px;
         }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px;
+        }
+
         .buttons {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
         }
+
         button {
             font-size: 1.5rem;
             padding: 15px 30px;
@@ -26,16 +40,20 @@
             border: none;
             border-radius: 20px;
             cursor: pointer;
+            transition: 0.3s;
         }
+
         #yes {
             background: #ff4500;
             color: white;
         }
+
         #no {
             background: #000;
             color: white;
             position: absolute;
         }
+
         #flower-page {
             display: none;
             background: radial-gradient(circle, #ff0000, #ffa07a);
@@ -47,18 +65,20 @@
             overflow: hidden;
             position: relative;
         }
+
         .rose {
-            width: 200px;
-            height: 200px;
+            width: 20vw;
+            height: 20vw;
             position: absolute;
             right: 0;
             display: inline-block;
             animation: yidon 5s infinite;
             transform: translateY(40%);
         }
+
         .petal {
-            width: 50px;
-            height: 50px;
+            width: 5vw;
+            height: 5vw;
             background: #fe7696;
             border-radius: 0px 50%;
             position: absolute;
@@ -67,74 +87,83 @@
             transform-origin: bottom right;
             animation: zhankai2 10s infinite;
         }
+
         .petal:nth-child(2) {
             transform-origin: right bottom;
             transform: rotate(90deg);
             background: #fe7696;
-            left: -10px;
+            left: -1vw;
             animation: zhankai1 10s infinite;
         }
+
         .petal:nth-child(3) {
-            width: 40px;
-            height: 40px;
-            left: 10px;
-            top: -20px;
+            width: 4vw;
+            height: 4vw;
+            left: 1vw;
+            top: -2vw;
             z-index: 1;
             background: #f03a64;
             transform-origin: bottom right;
             animation: zhankai2 10s infinite;
         }
+
         .petal:nth-child(4) {
             transform: rotate(90deg);
-            width: 40px;
-            height: 40px;
-            left: 0px;
-            top: -20px;
+            width: 4vw;
+            height: 4vw;
+            left: 0vw;
+            top: -2vw;
             z-index: 1;
             background: #f03a64;
             transform-origin: bottom right;
             animation: zhankai1 10s infinite;
         }
+
         .petal:nth-child(5) {
-            width: 50px;
-            height: 50px;
-            border-radius: 20px;
-            left: 20px;
-            top: -30px;
+            width: 5vw;
+            height: 5vw;
+            border-radius: 20%;
+            left: 2vw;
+            top: -3vw;
             z-index: 0;
             background: #d1123f;
         }
+
         .leaf {
             position: absolute;
-            top: 120px;
-            left: -115px;
+            top: 12vw;
+            left: -11vw;
         }
+
         .stem {
-            width: 240px;
-            height: 40px;
+            width: 24vw;
+            height: 4vw;
             background: transparent;
             border: 8px solid #8ac78a;
             border-color: #77a377 transparent transparent transparent;
             border-radius: 50% 50%;
             transform: rotate(100deg);
         }
+
         .leafs {
-            width: 50px;
-            height: 40px;
+            width: 5vw;
+            height: 4vw;
             border-radius: 0px 50%;
             background: #77a377;
             position: absolute;
             top: 0;
-            left: 100px;
+            left: 10vw;
             z-index: 49;
         }
+
         .leafs:nth-child(2) {
-            width: 40px;
-            height: 20px;
-            top: 40px;
-            left: 140px;
+            width: 4vw;
+            height: 2vw;
+            top: 4vw;
+            left: 14vw;
             transform: rotate(120deg);
         }
+
         @keyframes yidon {
             50% {
                 transform: translateY(35%);
@@ -143,6 +172,7 @@
                 transform: translateY(40%);
             }
         }
+
         @keyframes zhankai1 {
             50% {
                 transform: rotate(110deg);
@@ -151,6 +181,7 @@
                 transform: rotate(90deg);
             }
         }
+
         @keyframes zhankai2 {
             50% {
                 transform: rotate(-20deg);
@@ -159,27 +190,31 @@
                 transform: rotate(0deg);
             }
         }
+
         .center {
             position: absolute;
-            width: 40px;
-            height: 40px;
+            width: 4vw;
+            height: 4vw;
             background: yellow;
             border-radius: 50%;
         }
+
         .fireworks {
             position: absolute;
             width: 100vw;
             height: 100vh;
             overflow: hidden;
         }
+
         .firework {
             position: absolute;
-            width: 10px;
-            height: 10px;
+            width: 1vw;
+            height: 1vw;
             background: yellow;
             border-radius: 50%;
             animation: explode 1.5s ease-out forwards;
         }
+
         @keyframes explode {
             from { transform: scale(1); opacity: 1; }
             to { transform: scale(5); opacity: 0; }
@@ -198,7 +233,7 @@
     
     <div id="flower-page">
         <h1>รักนะจุ๊บๆ 💕</h1>
-        <h2>....Happy valentines day....</h2>
+        <h2>...Happy valentines day...</h2>
         <div class="rose">
             <div class="flower">
                 <div class="petal"></div>
